@@ -1,0 +1,161 @@
+
+/*JSON QUE ENVIA OS DADOS PARA INSERIR FRENTE*/
+
+{
+   "service":3,
+   "agency":49,
+   "from":{
+      "name":"Nome do remetente",
+      "phone":"53984470102",
+      "email":"contato@melhorenvio.com.br",
+      "document":"16571478358",
+      "company_document":"89794131000100",
+      "state_register":"123456",
+      "address":"Endereço do remetente",
+      "complement":"Complemento",
+      "number":"1",
+      "district":"Bairro",
+      "city":"São Paulo",
+      "country_id":"BR",
+      "postal_code":"01002001",
+      "note":"observação"
+   },
+   "to":{
+      "name":"Nome do destinatário",
+      "phone":"53984470102",
+      "email":"contato@melhorenvio.com.br",
+      "document":"25404918047",
+      "company_document":"07595604000177",
+      "state_register":"123456",
+      "address":"Endereço do destinatário",
+      "complement":"Complemento",
+      "number":"2",
+      "district":"Bairro",
+      "city":"Porto Alegre",
+      "state_abbr":"RS",
+      "country_id":"BR",
+      "postal_code":"90570020",
+      "note":"observação"
+   },
+   "products":[
+      {
+         "name":"Papel adesivo para etiquetas 1",
+         "quantity":3,
+         "unitary_value":100.00
+      },
+      {
+         "name":"Papel adesivo para etiquetas 2",
+         "quantity":1,
+         "unitary_value":700.00
+      }
+   ],
+   "volumes":[
+      {
+         "height":15,
+         "width":20,
+         "length":10,
+         "weight":3.5
+      }
+   ],
+   "options":{
+      "insurance_value":1000.00,
+      "receipt":false,
+      "own_hand":false,
+      "reverse":false,
+      "non_commercial":false,
+      "invoice":{
+         "key":"31190307586261000184550010000092481404848162"
+      },
+      "platform":"Nome da Plataforma",
+      "tags":[
+         {
+            "tag":"Identificação do pedido na plataforma, exemplo: 1000007",
+            "url":"Link direto para o pedido na plataforma, se possível, caso contrário pode ser passado o valor null"
+         }
+      ]
+   }
+}
+
+
+/*JSON DE RETORNO DA ACAO DE INSERIR FRETE*/
+
+
+{
+   "id":"a54d16ed-1a73-4625-b73f-fb24833b9fb6",
+   "protocol":"ORD-202210111359",
+   "service_id":3,
+   "agency_id":49,
+   "contract":null,
+   "service_code":null,
+   "quote":34.32,
+   "price":34.32,
+   "coupon":null,
+   "discount":8.11,
+   "delivery_min":6,
+   "delivery_max":7,
+   "status":"pending",
+   "reminder":null,
+   "insurance_value":1000,
+   "weight":null,
+   "width":null,
+   "height":null,
+   "length":null,
+   "diameter":null,
+   "format":"box",
+   "billed_weight":3.5,
+   "receipt":false,
+   "own_hand":false,
+   "collect":false,
+   "collect_scheduled_at":null,
+   "reverse":false,
+   "non_commercial":false,
+   "authorization_code":null,
+   "tracking":null,
+   "self_tracking":null,
+   "delivery_receipt":null,
+   "additional_info":null,
+   "cte_key":null,
+   "paid_at":null,
+   "generated_at":null,
+   "posted_at":null,
+   "delivered_at":null,
+   "canceled_at":null,
+   "suspended_at":null,
+   "expired_at":null,
+   "created_at":"2022-10-25 22:35:52",
+   "updated_at":"2022-10-25 22:35:52",
+   "parse_pi_at":null,
+   "products":[
+      {
+         "name":"Papel adesivo para etiquetas 1",
+         "quantity":3,
+         "unitary_value":100,
+         "weight":null
+      },
+      {
+         "name":"Papel adesivo para etiquetas 2",
+         "quantity":1,
+         "unitary_value":700,
+         "weight":null
+      }
+   ],
+   "volumes":[
+      {
+         "id":115562,
+         "height":"10.00",
+         "width":"15.00",
+         "length":"20.00",
+         "diameter":"0.00",
+         "weight":"3.50",
+         "format":"box",
+         "created_at":"2022-10-25 22:35:52",
+         "updated_at":"2022-10-25 22:35:52"
+      }
+   ],
+   "tags":[
+      {
+         "tag":"Identifica\u00e7\u00e3o do pedido na plataforma, exemplo: 1000007",
+         "url":"Link direto para o pedido na plataforma, se poss\u00edvel, caso contr\u00e1rio pode ser passado o valor null"
+      }
+   ]
+}
