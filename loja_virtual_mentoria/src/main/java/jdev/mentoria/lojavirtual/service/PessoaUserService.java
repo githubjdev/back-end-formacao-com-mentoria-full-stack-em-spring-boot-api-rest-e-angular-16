@@ -119,7 +119,7 @@ public class PessoaUserService {
 		
 		for (int i = 0; i< pessoaFisica.getEnderecos().size(); i++) {
 			pessoaFisica.getEnderecos().get(i).setPessoa(pessoaFisica);
-			//pessoaFisica.getEnderecos().get(i).setEmpresa(pessoaFisica);
+			pessoaFisica.getEnderecos().get(i).setEmpresa(pessoaFisica.getEmpresa());
 		}
 		
 		pessoaFisica = pesssoaFisicaRepository.save(pessoaFisica);
