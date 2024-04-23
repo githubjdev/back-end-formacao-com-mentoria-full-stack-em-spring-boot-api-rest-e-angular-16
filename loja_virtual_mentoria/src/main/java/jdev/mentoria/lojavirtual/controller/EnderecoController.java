@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 
-import jdev.mentoria.lojavirtual.model.Acesso;
 import jdev.mentoria.lojavirtual.model.Endereco;
 import jdev.mentoria.lojavirtual.repository.EnderecoRepository;
 
