@@ -26,8 +26,9 @@ public class EnderecoController {
 	@PostMapping(value = "**/deleteEndereco") 
 	public ResponseEntity<String> deleteEndereco(@RequestBody Endereco endereco) {
 		
-		enderecoRepository.deleteById(endereco.getId());
-		
+		if(endereco.getId() != null) {
+		 enderecoRepository.deleteById(endereco.getId());
+		}
 		return new ResponseEntity<String>(new Gson().toJson("Endereco Removido"),HttpStatus.OK);
 	}
 
