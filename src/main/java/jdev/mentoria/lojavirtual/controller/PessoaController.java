@@ -39,9 +39,7 @@ import jdev.mentoria.lojavirtual.service.ServiceContagemAcessoApi;
 import jdev.mentoria.lojavirtual.service.ServiceSendEmail;
 import jdev.mentoria.lojavirtual.util.ValidaCNPJ;
 import jdev.mentoria.lojavirtual.util.ValidaCPF;
-/*
- * Controller de pessoa a usuário
- * */
+
 @RestController
 public class PessoaController {
 	
@@ -80,7 +78,14 @@ public class PessoaController {
 	
 	
 	
-	
+	@ResponseBody
+	@GetMapping(value = "**/consultaPfCpf/{cpf}")
+	public ResponseEntity<List<PessoaFisica>> consultaPfCpf(@PathVariable("cpf") String cpf) {
+		
+		List<PessoaFisica> fisicas = pesssoaFisicaRepository.pesquisaPorCpfPF(cpf);
+		
+		return new ResponseEntity<List<PessoaFisica>>(fisicas, HttpStatus.OK);
+	}
 	
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -94,16 +99,6 @@ public class PessoaController {
 		
 	}
 	
-	
-	
-	@ResponseBody
-	@GetMapping(value = "**/consultaPfCpf/{cpf}")
-	public ResponseEntity<List<PessoaFisica>> consultaPfCpf(@PathVariable("cpf") String cpf) {
-		
-		List<PessoaFisica> fisicas = pesssoaFisicaRepository.pesquisaPorCpfPF(cpf);
-		
-		return new ResponseEntity<List<PessoaFisica>>(fisicas, HttpStatus.OK);
-	}
 	
 	
 	@ResponseBody
