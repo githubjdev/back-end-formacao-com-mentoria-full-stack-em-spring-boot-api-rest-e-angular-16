@@ -83,9 +83,6 @@ public class PessoaController {
 	
 	
 	
-	
-	
-	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@ResponseBody
 	@GetMapping(value = "**/listUserByEmpresa/{idEmpresa}")
