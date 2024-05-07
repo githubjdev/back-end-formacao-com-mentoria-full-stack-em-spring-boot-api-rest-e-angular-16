@@ -426,4 +426,17 @@ public class PessoaController {
 	
 	
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@ResponseBody
+	@GetMapping(value = "**/listUserByEmpresa/{idEmpresa}")
+	public ResponseEntity<List<Usuario>> listUserByEmpresa(@PathVariable("idEmpresa") Long idEmpresa){
+		
+		List<Usuario> usuarios = usuarioRepository.listUserByEmpresa(idEmpresa);
+		
+		return new ResponseEntity(usuarios, HttpStatus.OK);
+		
+	}
+	
+	
+
 }
