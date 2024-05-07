@@ -78,6 +78,14 @@ public class PessoaController {
 		return new ResponseEntity<List<PessoaFisica>>(fisicas, HttpStatus.OK);
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@ResponseBody
 	@GetMapping(value = "**/listUserByEmpresa/{idEmpresa}")
