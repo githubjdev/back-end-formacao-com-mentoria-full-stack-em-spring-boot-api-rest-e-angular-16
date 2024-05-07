@@ -1,0 +1,31 @@
+
+
+/*Gera as etiqueta*/
+
+{
+    "orders":[
+        "a54d16ed-1a73-4625-b73f-fb24833b9fb6"
+    ]
+}
+
+
+/*Retorno da geração da etiqueta*/
+
+{"a54d16ed-1a73-4625-b73f-fb24833b9fb6":{"status":true,"message":"Envio gerado com sucesso"}}
+
+
+
+
+/*Impressão das etiquetas*/
+
+{
+    "mode": "private",
+    "orders": [
+        "a54d16ed-1a73-4625-b73f-fb24833b9fb6"
+    ]
+}
+
+
+/*Resultado da impressão da etiqueta*/
+
+http:\\sandbox.melhorenvio.com.br\imprimir\2xHOUpjSQYDr

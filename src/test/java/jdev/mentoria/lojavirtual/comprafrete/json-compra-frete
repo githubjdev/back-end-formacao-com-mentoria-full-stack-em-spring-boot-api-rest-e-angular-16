@@ -1,0 +1,240 @@
+/*json cmopra frente*/
+
+{
+    "orders": [
+        "a54d16ed-1a73-4625-b73f-fb24833b9fb6"
+    ]
+}
+
+
+
+/*Retorno do frente comprado*/
+
+{
+   "purchase":{
+      "id":"67798373-b165-4ac8-8933-b5cd3fbd3dc1",
+      "protocol":"PUR-20221031442",
+      "total":34.32,
+      "discount":8.11,
+      "status":"paid",
+      "paid_at":"2022-10-25 22:47:06",
+      "canceled_at":null,
+      "created_at":"2022-10-25 22:47:06",
+      "updated_at":"2022-10-25 22:47:06",
+      "payment":null,
+      "transactions":[
+         {
+            "id":"a69b3fe6-c2bd-4891-83c6-f9333344e5e9",
+            "protocol":"TRN-20221067608",
+            "value":34.32,
+            "type":"debit",
+            "status":"authorized",
+            "description":"Pagamento de envios (PUR-20221031442)",
+            "authorized_at":"2022-10-25 22:47:06",
+            "unauthorized_at":null,
+            "reserved_at":null,
+            "canceled_at":null,
+            "created_at":"2022-10-25 22:47:06",
+            "description_internal":null,
+            "reason":{
+               "id":7,
+               "label":"Pagamento de envios",
+               "description":""
+            }
+         }
+      ],
+      "orders":[
+         {
+            "id":"a54d16ed-1a73-4625-b73f-fb24833b9fb6",
+            "protocol":"ORD-202210111359",
+            "service_id":3,
+            "agency_id":49,
+            "contract":null,
+            "service_code":null,
+            "quote":34.32,
+            "price":34.32,
+            "coupon":null,
+            "discount":8.11,
+            "delivery_min":6,
+            "delivery_max":7,
+            "status":"released",
+            "reminder":null,
+            "insurance_value":1000,
+            "weight":null,
+            "width":null,
+            "height":null,
+            "length":null,
+            "diameter":null,
+            "format":"box",
+            "billed_weight":3.5,
+            "receipt":false,
+            "own_hand":false,
+            "collect":false,
+            "collect_scheduled_at":null,
+            "reverse":false,
+            "non_commercial":false,
+            "authorization_code":null,
+            "tracking":null,
+            "self_tracking":null,
+            "delivery_receipt":null,
+            "additional_info":null,
+            "cte_key":null,
+            "paid_at":"2022-10-25 22:47:06",
+            "generated_at":null,
+            "posted_at":null,
+            "delivered_at":null,
+            "canceled_at":null,
+            "suspended_at":null,
+            "expired_at":null,
+            "created_at":"2022-10-25 22:35:52",
+            "updated_at":"2022-10-25 22:47:06",
+            "parse_pi_at":null,
+            "from":{
+               "name":"Nome do remetente",
+               "phone":"53984470102",
+               "email":"contato@melhorenvio.com.br",
+               "document":"16571478358",
+               "company_document":"89794131000100",
+               "state_register":"123456",
+               "postal_code":"1002001",
+               "address":"Endere\u00e7o do remetente",
+               "location_number":"1",
+               "complement":"Complemento",
+               "district":"Bairro",
+               "city":"S\u00e3o Paulo",
+               "state_abbr":"SP",
+               "country_id":"BR",
+               "latitude":null,
+               "longitude":null,
+               "note":"observa\u00e7\u00e3o"
+            },
+            "to":{
+               "name":"Nome do destinat\u00e1rio",
+               "phone":"53984470102",
+               "email":"contato@melhorenvio.com.br",
+               "document":"25404918047",
+               "company_document":"07595604000177",
+               "state_register":"123456",
+               "postal_code":"90570020",
+               "address":"Endere\u00e7o do destinat\u00e1rio",
+               "location_number":"2",
+               "complement":"Complemento",
+               "district":"Bairro",
+               "city":"Porto Alegre",
+               "state_abbr":"RS",
+               "country_id":"BR",
+               "latitude":null,
+               "longitude":null,
+               "note":"observa\u00e7\u00e3o"
+            },
+            "service":{
+               "id":3,
+               "name":".Package",
+               "status":"available",
+               "type":"normal",
+               "range":"interstate",
+               "restrictions":"{\"insurance_value\":{\"min\":0,\"max\":29900},\"formats\":{\"box\":{\"weight\":{\"min\":0.001,\"max\":120},\"width\":{\"min\":1,\"max\":105},\"height\":{\"min\":1,\"max\":100},\"length\":{\"min\":1,\"max\":181},\"sum\":386}}}",
+               "requirements":"[\"names\",\"phones\",\"addresses\",\"documents\",\"invoice\"]",
+               "optionals":"[\"AR\",\"VD\"]",
+               "company":{
+                  "id":2,
+                  "name":"Jadlog",
+                  "status":"available",
+                  "picture":"\/images\/shipping-companies\/jadlog.png",
+                  "use_own_contract":false
+               }
+            },
+            "agency":{
+               "id":49,
+               "company_id":2,
+               "name":"CO MIRASSOL 01 ",
+               "initials":"CO-MSL-01",
+               "code":"1008588",
+               "status":"available",
+               "company_name":"RODOZELLI EXPRESS LTDA ME",
+               "email":"bozelli.msl@jadlog.com.br",
+               "note":null,
+               "created_at":"2017-09-11 17:47:14",
+               "updated_at":"2018-03-12 23:48:11",
+               "address":{
+                  "id":49,
+                  "label":"Ag\u00eancia JadLog",
+                  "postal_code":"15130000",
+                  "address":"Rua Frei Antonio Zimmermann 2020",
+                  "number":null,
+                  "complement":null,
+                  "district":"Jardim Alvorada",
+                  "latitude":-20.8201453,
+                  "longitude":-49.4951883,
+                  "confirmed_at":null,
+                  "created_at":"2017-09-11 17:47:14",
+                  "updated_at":"2017-10-19 16:47:34",
+                  "city":{
+                     "id":5047,
+                     "city":"Mirassol",
+                     "state":{
+                        "id":25,
+                        "state":"S\u00e3o Paulo",
+                        "state_abbr":"SP",
+                        "country":{
+                           "id":"BR",
+                           "country":"Brazil"
+                        }
+                     }
+                  }
+               },
+               "phone":{
+                  "id":49,
+                  "label":"Ag\u00eancia JadLog",
+                  "phone":"1732532042",
+                  "type":"fixed",
+                  "country_id":"BR",
+                  "confirmed_at":null,
+                  "created_at":"2017-09-11 17:47:14",
+                  "updated_at":"2017-09-11 17:47:14"
+               }
+            },
+            "invoice":{
+               "model":"55",
+               "number":"9248",
+               "serie":"1",
+               "key":"31190307586261000184550010000092481404848162",
+               "value":null,
+               "cfop":null,
+               "issued_at":"2019-03-01 00:00:00",
+               "uploaded_at":null,
+               "to_document":null
+            },
+            "tags":[
+               {
+                  "tag":"Identifica\u00e7\u00e3o do pedido na plataforma, exemplo: 1000007",
+                  "url":"Link direto para o pedido na plataforma, se poss\u00edvel, caso contr\u00e1rio pode ser passado o valor null"
+               }
+            ],
+            "products":[
+               {
+                  "name":"Papel adesivo para etiquetas 1",
+                  "quantity":3,
+                  "unitary_value":100,
+                  "weight":null
+               },
+               {
+                  "name":"Papel adesivo para etiquetas 2",
+                  "quantity":1,
+                  "unitary_value":700,
+                  "weight":null
+               }
+            ],
+            "generated_key":null
+         }
+      ],
+      "paypal_discounts":[
+         
+      ]
+   },
+   "digitable":null,
+   "redirect":null,
+   "message":null,
+   "token":null,
+   "payment_id":null
+}
