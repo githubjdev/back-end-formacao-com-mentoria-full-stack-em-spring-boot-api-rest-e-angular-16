@@ -116,6 +116,17 @@ public class AcessoController {
 	}
 	
 	
+	
+	@ResponseBody
+	@GetMapping(value = "**/listaAcessoPorEmpresa/{idEmpresa}")
+	public ResponseEntity<List<Acesso>> listaAcesso(@PathVariable("idEmpresa") Long idEmpresa){
+		
+		List<Acesso> lista = acessoRepository.findAcessos(idEmpresa);
+		
+		return new ResponseEntity<List<Acesso>>(lista, HttpStatus.OK);
+	}
+	
+	
 	@ResponseBody
 	@GetMapping(value = "**/qtdPaginaAcesso/{idEmpresa}")
 	public ResponseEntity<Integer> qtdPagina(@PathVariable("idEmpresa") Long idEmpresa){

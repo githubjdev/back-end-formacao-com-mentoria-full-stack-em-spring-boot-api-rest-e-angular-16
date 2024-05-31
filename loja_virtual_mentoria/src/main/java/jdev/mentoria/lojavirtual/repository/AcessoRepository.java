@@ -26,5 +26,8 @@ public interface AcessoRepository extends JpaRepository<Acesso, Long> {
 	
 	@Query(value = "select a from Acesso a where a.empresa.id = ?1 ")
 	public List<Acesso> findPorPage(Long idEmpresa, Pageable pageable);
+	
+	@Query(value = "select a from Acesso a where a.empresa.id = ?1 ")
+	public List<Acesso> findAcessos(Long idEmpresa);
 
 }
