@@ -24,7 +24,7 @@ public class TesteJunoBoleto extends TestCase {
 		dados.setEmail("alex.fernando.egidio@gmail.com");
 		dados.setPayerName("alex fernando egidio");
 		dados.setPayerCpfCnpj("05916564937");
-		dados.setPayerPhone("45999795800");
+		dados.setPayerPhone("44988212355");
 		dados.setIdVenda(15L);
 		
 		String retorno = serviceJunoBoleto.gerarCarneApiAsaas(dados);
@@ -39,7 +39,7 @@ public class TesteJunoBoleto extends TestCase {
 		dados.setEmail("alex.fernando.egidio@gmail.com");
 		dados.setPayerName("alex fernando egidio");
 		dados.setPayerCpfCnpj("05916564937");
-		dados.setPayerPhone("45999795800");
+		dados.setPayerPhone("44988212355");
 		
 		String  customer_id =serviceJunoBoleto.buscaClientePessoaApiAsaas(dados);
 		
