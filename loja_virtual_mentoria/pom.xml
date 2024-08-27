@@ -17,7 +17,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>loja_virtual_mentoria</name>
 	<description>Demo project for Spring Boot</description>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<properties>
 		<java.version>11</java.version>
@@ -174,6 +174,18 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<jvmArguments>
+						--add-modules java.se
+						--add-exports java.base/jdk.internal.ref=ALL-UNNAMED
+						--add-opens java.base/java.lang=ALL-UNNAMED
+						--add-opens java.base/java.nio=ALL-UNNAMED
+						--add-opens java.base/sun.nio.ch=ALL-UNNAMED
+						--add-opens java.management/sun.management=ALL-UNNAMED
+						--add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED
+						-Dhazelcast.diagnostics.enabled=false
+					</jvmArguments>
+				</configuration>
 			</plugin>
 
 			<plugin>
