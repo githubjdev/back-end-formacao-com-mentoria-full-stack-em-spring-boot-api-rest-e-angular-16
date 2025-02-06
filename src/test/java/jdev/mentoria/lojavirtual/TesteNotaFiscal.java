@@ -77,7 +77,7 @@ public class TesteNotaFiscal extends TestCase {
 		cliente.setEmail("alex.fernando.egidio@gmail.com");
 		cliente.setEndereco("Pioneiro antonio de ganello");
 		cliente.setNumero("356");
-		cliente.setTelefone("45999795800");
+		cliente.setTelefone("44988212355");
 		cliente.setUf("PR");
 		cliente.setNome_completo("Alex Fernando Egidio");
 		

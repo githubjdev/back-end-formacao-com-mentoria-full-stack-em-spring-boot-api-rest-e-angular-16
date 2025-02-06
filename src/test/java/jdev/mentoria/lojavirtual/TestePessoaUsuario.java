@@ -41,7 +41,7 @@ public class TestePessoaUsuario extends TestCase {
 	 objetoPostCarneJuno.setInstallments("6");
 	 objetoPostCarneJuno.setPayerCpfCnpj("05916564937");
 	 objetoPostCarneJuno.setPayerName("Alex fernando");
-	 objetoPostCarneJuno.setPayerPhone("45999795800");
+	 objetoPostCarneJuno.setPayerPhone("44988212355");
 	 objetoPostCarneJuno.setReference("Venda de venda de loja virtual cod: 18");
 	 objetoPostCarneJuno.setTotalAmount("50.00");
 	 String valor =	serviceJunoBoleto.gerarCarneApi(objetoPostCarneJuno);
@@ -56,7 +56,7 @@ public class TestePessoaUsuario extends TestCase {
 		pessoaJuridica.setCnpj("" + Calendar.getInstance().getTimeInMillis());
 		pessoaJuridica.setNome("Alex fernando");
 		pessoaJuridica.setEmail("alex.fernando.egidio@gmail.com");
-		pessoaJuridica.setTelefone("45999795800");
+		pessoaJuridica.setTelefone("44988212355");
 		pessoaJuridica.setInscEstadual("65556565656665");
 		pessoaJuridica.setInscMunicipal("55554565656565");
 		pessoaJuridica.setNomeFantasia("54556565665");
@@ -113,7 +113,7 @@ public class TestePessoaUsuario extends TestCase {
 		pessoaFisica.setCpf("713.482.980-49");
 		pessoaFisica.setNome("Alex fernando");
 		pessoaFisica.setEmail("alex.fe85549989r9559nando.egidio@gmail.com");
-		pessoaFisica.setTelefone("45999795800");
+		pessoaFisica.setTelefone("44988212355");
 		pessoaFisica.setEmpresa(pessoaJuridica);
 		
 		Endereco endereco1 = new Endereco();

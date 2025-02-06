@@ -88,19 +88,6 @@ public class PessoaController {
 	}
 	
 	
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	@ResponseBody
-	@GetMapping(value = "**/listUserByEmpresa/{idEmpresa}")
-	public ResponseEntity<List<Usuario>> listUserByEmpresa(@PathVariable("idEmpresa") Long idEmpresa){
-		
-		List<Usuario> usuarios = usuarioRepository.listUserByEmpresa(idEmpresa);
-		
-		return new ResponseEntity(usuarios, HttpStatus.OK);
-		
-	}
-	
-	
-	
 	@ResponseBody
 	@GetMapping(value = "**/consultaNomePJ/{nome}")
 	public ResponseEntity<List<PessoaJuridica>> consultaNomePJ(@PathVariable("nome") String nome) {
@@ -436,6 +423,85 @@ public class PessoaController {
 		
 		return new ResponseEntity<String>(new Gson().toJson("PF Removido"),HttpStatus.OK);
 	}
+	
+	
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@ResponseBody
+	@GetMapping(value = "**/listUserByEmpresa/{idEmpresa}")
+	public ResponseEntity<List<Usuario>> listUserByEmpresa(@PathVariable("idEmpresa") Long idEmpresa){
+		
+		List<Usuario> usuarios = usuarioRepository.listUserByEmpresa(idEmpresa);
+		
+		return new ResponseEntity(usuarios, HttpStatus.OK);
+		
+	}
+	
+	
+	
+	@ResponseBody
+	@GetMapping(value = "**/userById/{idUser}")
+	public ResponseEntity<Usuario> userById(@PathVariable("idUser") Long idUser){
+		
+		Usuario usuarios = usuarioRepository.findById(idUser).get();
+		
+		return new ResponseEntity(usuarios, HttpStatus.OK);
+		
+	}
+	
+	
+	@ResponseBody 
+	@PostMapping(value = "**/removerUserPessoa") 
+	public ResponseEntity<String> removerUserPessoa(@RequestBody Long idUser) {
+		
+	  Usuario usuario = usuarioRepository.findById(idUser).get();
+	  
+	  usuarioRepository.deleteAcessoUserByPessoa(usuario.getPessoa().getId());
+	  usuarioRepository.deleteByPessoa(usuario.getPessoa().getId());
+		
+	  return new ResponseEntity<String>(new Gson().toJson("User removido"),HttpStatus.OK);
+	}
+	
+	
+	@ResponseBody 
+	@PostMapping(value = "**/adicionaRemoreAcesso") 
+	public ResponseEntity<String> adicionaRemoreAcesso(@RequestBody String params) {
+		
+	  String[] paramAcesso = params.split("-");	
+	  
+	  Long idAcesso = Long.parseLong(paramAcesso[0]);
+	  Long idUser = Long.parseLong(paramAcesso[1]);
+	  
+	  Boolean possuiAcesso = usuarioRepository.possuiAcesso(idAcesso, idUser);
+	  
+	  if (possuiAcesso) {
+		  usuarioRepository.deleteByAcesso(idAcesso, idUser);
+	  }else {
+		  usuarioRepository.addAcesso(idAcesso, idUser);
+	  }
+		
+	  return new ResponseEntity<String>(new Gson().toJson("Acesso atualizado"),HttpStatus.OK);
+	}
+	
+	
+	@ResponseBody 
+	@PostMapping(value = "**/updateUserPessoa") 
+	public ResponseEntity<String> deletePessoaJuridicia(@RequestBody Usuario usuario) { /*Recebe o JSON e converte pra Objeto*/
+		
+		usuarioRepository.updateLoginUser(usuario.getLogin(), usuario.getId());
+		
+	    boolean senhaIgual = usuarioRepository.senhaIgual(usuario.getSenha(), usuario.getId());
+	    
+	    if (!senhaIgual) {
+	    	String senhaCripto = new BCryptPasswordEncoder().encode(usuario.getSenha());
+	    	usuarioRepository.updateSenhaUserId(senhaCripto, usuario.getId());
+	    }
+		
+		return new ResponseEntity<String>(new Gson().toJson("User atualizado"),HttpStatus.OK);
+	}
+	
+	
+	
 	
 	
 

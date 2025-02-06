@@ -61,10 +61,10 @@ public class JWTTokenAutenticacaoService {
 		System.out.println(usuario.getEmpresa().getId());
 		
 		/*Usado para ver no Postman para teste*/
-		response.getWriter().write("{\"Authorization\": \""
-								+ token + "\",\"username\":\""
-								+ username +"\",\"empresa\":\""
-								+usuario.getEmpresa().getId() + "\"}");
+		response.getWriter().write("{\"Authorization\": \""+ token + "\","
+				                + "\"username\":\""+ username +"\","
+				                + "\"id\":\""+ usuario.getId() +"\","
+							    + "\"empresa\":\""+usuario.getEmpresa().getId() + "\"}");
 		
 	}
 	
