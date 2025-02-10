@@ -18,6 +18,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name = "cup_desc")
 @SequenceGenerator(name = "seq_cup_desc", sequenceName = "seq_cup_desc", allocationSize = 1, initialValue = 1)
@@ -32,10 +34,13 @@ public class CupDesc implements Serializable {
 	@Column(nullable = false)
 	private String codDesc;
 
+	@Column(name = "valor_real_desconto")
 	private BigDecimal valorRealDesc;
 
+	@Column(name = "valor_percentual_desconto")
 	private BigDecimal valorPorcentDesc;
 
+	@JsonFormat(pattern = "dd/MM/yyyy", shape = JsonFormat.Shape.STRING)
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date dataValidadeCupom;
