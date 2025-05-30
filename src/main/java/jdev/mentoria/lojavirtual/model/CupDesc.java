@@ -40,7 +40,8 @@ public class CupDesc implements Serializable {
 	@Column(name = "valor_percentual_desconto")
 	private BigDecimal valorPorcentDesc;
 
-	@JsonFormat(pattern = "dd/MM/yyyy", shape = JsonFormat.Shape.STRING)
+	@JsonFormat(pattern = "dd/MM/yyyy", 
+			shape = JsonFormat.Shape.STRING)
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date dataValidadeCupom;
